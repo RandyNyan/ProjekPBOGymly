@@ -24,3 +24,10 @@ C:\Users\randy\source\repos\PBO_Gymly\bin\Debug\net8.0-windows\PBO_Gymly.runtime
 C:\Users\randy\source\repos\PBO_Gymly\bin\Debug\net8.0-windows\PBO_Gymly.pdb
 C:\Users\randy\source\repos\PBO_Gymly\obj\Debug\net8.0-windows\PBO_Gymly.genruntimeconfig.cache
 C:\Users\randy\source\repos\PBO_Gymly\obj\Debug\net8.0-windows\ref\PBO_Gymly.dll
+C:\Users\randy\source\repos\PBO_Gymly\obj\Debug\net8.0-windows\PBO_Gymly.CustomerPage.resources
+C:\Users\randy\source\repos\PBO_Gymly\obj\Debug\net8.0-windows\PBO_Gymly.HomepageCustomer.resources
+C:\Users\randy\source\repos\PBO_Gymly\obj\Debug\net8.0-windows\PBO_Gymly.NambahJadwal.resources
+C:\Users\randy\source\repos\PBO_Gymly\obj\Debug\net8.0-windows\PBO_Gymly.JadwalGym.TampilanJadwal.resources
+C:\Users\randy\source\repos\PBO_Gymly\obj\Debug\net8.0-windows\PBO_Gymly.JadwalGym.UbahJadwal.resources
+C:\Users\randy\source\repos\PBO_Gymly\obj\Debug\net8.0-windows\PBO_Gymly.Registrasi.resources
+C:\Users\randy\source\repos\PBO_Gymly\obj\Debug\net8.0-windows\PBO_Gymly.JadwalGym.TampilanJadwalAdmin.resources

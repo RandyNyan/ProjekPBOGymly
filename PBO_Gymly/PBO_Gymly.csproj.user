@@ -1,19 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="AddFasilitasGym.cs">
+    <Compile Update="CustomerPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ChangeFasilitasGym.cs">
+    <Compile Update="FasilitasGym\AddFasilitasGym.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FasilitasGym.cs">
+    <Compile Update="FasilitasGym\ChangeFasilitasGym.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FasilitasGym\FasilitasGym.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="HomepageCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JadwalGym\NambahJadwal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JadwalGym\TampilanJadwal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JadwalGym\TampilanJadwalAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JadwalGym\UbahJadwal.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Registrasi.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

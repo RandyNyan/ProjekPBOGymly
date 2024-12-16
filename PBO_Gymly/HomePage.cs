@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBO_Gymly.JadwalGym;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,15 @@ namespace PBO_Gymly
             Login login = new Login();
 
             login.Show();
+
+            this.Hide();
+        }
+
+        private void Button_JadwalAdmin_Click(object sender, EventArgs e)
+        {
+            TampilanJadwalAdmin tampilanjadwaladmin = new TampilanJadwalAdmin();
+
+            tampilanjadwaladmin.Show();
 
             this.Hide();
         }

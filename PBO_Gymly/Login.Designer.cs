@@ -35,6 +35,7 @@
             TextBoxPassword = new TextBox();
             Button_Login = new Button();
             ButtonExit = new Button();
+            Button_Regist = new Button();
             SuspendLayout();
             // 
             // Label_Username
@@ -90,7 +91,7 @@
             Button_Login.FlatStyle = FlatStyle.Flat;
             Button_Login.Font = new Font("Anton", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Button_Login.ForeColor = Color.FromArgb(249, 249, 249);
-            Button_Login.Location = new Point(691, 359);
+            Button_Login.Location = new Point(692, 359);
             Button_Login.Name = "Button_Login";
             Button_Login.Size = new Size(77, 40);
             Button_Login.TabIndex = 4;
@@ -105,13 +106,28 @@
             ButtonExit.FlatStyle = FlatStyle.Flat;
             ButtonExit.Font = new Font("Anton", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ButtonExit.ForeColor = Color.FromArgb(249, 249, 249);
-            ButtonExit.Location = new Point(597, 359);
+            ButtonExit.Location = new Point(518, 359);
             ButtonExit.Name = "ButtonExit";
-            ButtonExit.Size = new Size(77, 42);
+            ButtonExit.Size = new Size(77, 40);
             ButtonExit.TabIndex = 5;
             ButtonExit.Text = "Exit";
             ButtonExit.UseVisualStyleBackColor = true;
             ButtonExit.Click += ButtonExit_Click;
+            // 
+            // Button_Regist
+            // 
+            Button_Regist.BackColor = Color.FromArgb(127, 200, 248);
+            Button_Regist.FlatAppearance.BorderSize = 0;
+            Button_Regist.FlatStyle = FlatStyle.Flat;
+            Button_Regist.Font = new Font("Anton", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Button_Regist.ForeColor = Color.FromArgb(249, 249, 249);
+            Button_Regist.Location = new Point(606, 359);
+            Button_Regist.Name = "Button_Regist";
+            Button_Regist.Size = new Size(77, 40);
+            Button_Regist.TabIndex = 6;
+            Button_Regist.Text = "Regist";
+            Button_Regist.UseVisualStyleBackColor = true;
+            Button_Regist.Click += Button_Regist_Click;
             // 
             // Login
             // 
@@ -119,6 +135,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
+            Controls.Add(Button_Regist);
             Controls.Add(ButtonExit);
             Controls.Add(Button_Login);
             Controls.Add(TextBoxPassword);
@@ -139,5 +156,6 @@
         private TextBox TextBoxPassword;
         private Button Button_Login;
         private Button ButtonExit;
+        private Button Button_Regist;
     }
 }

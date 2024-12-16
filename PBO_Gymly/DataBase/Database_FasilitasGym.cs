@@ -12,7 +12,7 @@ namespace PBO_Gymly.DataBase
     {
         // Properti credential database dan koneksinya
         private static readonly string DB_HOST = "localhost";
-        private static readonly string DB_DATABASE = "PBO_Gymly";
+        private static readonly string DB_DATABASE = "Database_Gymly";
         private static readonly string DB_USERNAME = "postgres";
         private static readonly string DB_PASSWORD = "1412";
         private static readonly string DB_PORT = "5433";

@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using Npgsql;
 using PBO_Gymly.DataBase;
+using static System.Windows.Forms.DataFormats;
 
 namespace PBO_Gymly
 {
@@ -24,8 +25,9 @@ namespace PBO_Gymly
                 MessageBox.Show("Data salah, isi kembali!");
                 return; // Menghentikan eksekusi jika input kosong
             }
+            string role = GetUserRole(username, password);
 
-            if (IsValidUser(username, password))
+            if (role == "admin")
             {
                 HomePage homepage = new HomePage();
 
@@ -33,14 +35,24 @@ namespace PBO_Gymly
 
                 this.Hide();
             }
+            else if (role == "customer")
+            {
+                HomepageCustomer customerpage = new HomepageCustomer();
+                
+                customerpage.Show();
+                
+                this.Hide();
+            }
             else
             {
                 MessageBox.Show("Username atau password salah, isi kembali!");
             }
         }
-        private bool IsValidUser(string username, string password)
+        private string GetUserRole(string username, string password)
         {
-            string query = "SELECT COUNT(*) FROM akun WHERE nama_akun = @Username AND password_akun = @Password";
+            string queryAdmin = "SELECT COUNT(*) FROM Akun_admin WHERE Nama_admin = @Username AND Password_admin = @Password";
+            string queryCustomer = "SELECT COUNT(*) FROM Akun_customer WHERE Nama_customer = @Username AND Password_customer = @Password";
+
             NpgsqlParameter[] parameters = new NpgsqlParameter[]
             {
                 new NpgsqlParameter("@Username", username),
@@ -49,14 +61,31 @@ namespace PBO_Gymly
 
             try
             {
-                DataTable result = Database_FasilitasGym.queryExecutor(query, parameters);
-                int userCount = Convert.ToInt32(result.Rows[0][0]);
-                return userCount > 0;
+                // Cek di tabel admin
+                DataTable adminResult = Database_FasilitasGym.queryExecutor(queryAdmin, parameters);
+                int adminCount = Convert.ToInt32(adminResult.Rows[0][0]);
+
+                if (adminCount > 0)
+                {
+                    return "admin";
+                }
+
+                // Cek di tabel customer
+                DataTable customerResult = Database_FasilitasGym.queryExecutor(queryCustomer, parameters);
+                int customerCount = Convert.ToInt32(customerResult.Rows[0][0]);
+
+                if (customerCount > 0)
+                {
+                    return "customer";
+                }
+
+                // Jika tidak ditemukan di kedua tabel
+                return string.Empty;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-                return false;
+                return string.Empty;
             }
         }
 
@@ -72,6 +101,15 @@ namespace PBO_Gymly
             {
                 return;
             }
+        }
+
+        private void Button_Regist_Click(object sender, EventArgs e)
+        {
+            Registrasi registrasi = new Registrasi();
+
+            registrasi.Show();
+
+            this.Hide();
         }
     }
 }
